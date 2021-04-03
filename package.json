@@ -1,0 +1,40 @@
+{
+  "name": "hetu-site-www",
+  "version": "0.0.1",
+  "description": "Official website of Hetu script language.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx webpack --config webpack.config.js --progress --watch",
+    "build": "npx webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hetu-script/site-www.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hetu-script/site-www/issues"
+  },
+  "homepage": "https://github.com/hetu-script/site-www#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.13.10",
+    "@vue/compiler-dom": "^3.0.11",
+    "@vue/runtime-dom": "^3.0.11",
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@vue/compiler-sfc": "^3.0.11",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.0",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.0.4",
+    "vue-loader": "^15.9.6",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
+  }
+}
