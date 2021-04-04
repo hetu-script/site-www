@@ -5,13 +5,13 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   context: path.join(__dirname, 'src'),
-  entry: { app: './app.js', test: './test.js' },
+  entry: { app: './app.js' },
   output: {
-    path: path.resolve(__dirname, 'static'),
+    path: path.resolve(__dirname, 'public/js'),
     filename: '[name].bundle.js',
   },
   resolve: {
-    modules: [path.resolve(__dirname, 'src/modules'), 'node_modules'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     alias: {
       vue: 'vue/dist/vue.esm-bundler.js',
     },
@@ -61,9 +61,7 @@ module.exports = {
     // make sure to include the plugin!
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: "'development'",
-      },
+      'process.env.NODE_ENV' : JSON.stringify('development'),
       __VUE_OPTIONS_API__: true,
       __VUE_PROD_DEVTOOLS__: false,
     }),
