@@ -19,11 +19,7 @@
     </div>
     <div class="row">
       <div class="col pt-5 text-end">
-        <a
-          class="btn doc-btn"
-          href="https://github.com/hetu-script/hetu-script/blob/master/README.md"
-          >Documents</a
-        >
+        <a class="btn doc-btn" href="/docs/en-US/#introduction">Get Started</a>
       </div>
       <div class="col pt-5 text-start">
         <a
@@ -63,34 +59,24 @@ export default {
 }
 
 .doc-btn {
-  background-color: #e2e3eb;
-  color: gray;
-  transition: 0.3s;
-}
-
-.doc-btn:hover {
-  background-color: #ecedf3;
-  color: gray;
-}
-
-.doc-btn:active:hover {
-  background-color: #ced0dd;
-  color: gray;
-}
-
-.github-btn {
   background-color: #3e8e41;
   color: white;
   transition: 0.3s;
 }
 
-.github-btn:hover {
+.doc-btn:hover {
   background-color: #61b464;
   color: white;
 }
 
-.github-btn:active:hover {
-  background-color: #458147;
-  color: white;
+.github-btn {
+  background-color: #e2e3eb;
+  color: gray;
+  transition: 0.3s;
+}
+
+.github-btn:hover {
+  background-color: #ecedf3;
+  color: gray;
 }
 </style>
