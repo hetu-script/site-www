@@ -90,28 +90,28 @@ Parameter declaration have no opcode marker at the start since it's always part 
 FunctionTypeId is not included in bytecode, the vm has to
 create the typeid according to the param types and return value type.
 
-| Name                 | Bytes Length | type                   | optional |
-| :------------------- | :----------- | :--------------------- | :------- |
-| id                   | 256          | short utf8 string      |          |
-| declId               | 256          | short utf8 string      |          |
-| type params length   | 1            | byte                   |          |
-| type params list     | ...          | short utf8 string list |          |
-| hasExternalTypedef   | 1            | bool                   |          |
-| externalTypedef      | 256          | short utf8 string      |          |
-| function type        | 1            | byte                   |          |
-| extern type          | 1            | byte                   |          |
-| isStatic             | 1            | bool                   |          |
-| isConst              | 1            | bool                   |          |
-| isVariadic           | 1            | bool                   |          |
-| min arity            | 1            | byte                   |          |
-| max arity\*          | 1            | byte                   |          |
-| length of paramDecls | 1            | byte                   |          |
-| list of param decls  | 255          | bytecode list          | true     |
-| has return type      | 1            | bool                   |          |
-| return type          | ...          | HTTypeId               |          |
-| hasBody              | 1            | bool                   |          |
-| length of body       | 2            | uint16                 | true     |
-| body with endOfExec  | 65,535       | bytecode               | true     |
+| Name                                                            | Bytes Length | type                   | optional |
+| :-------------------------------------------------------------- | :----------- | :--------------------- | :------- |
+| id                                                              | 256          | short utf8 string      |          |
+| declId                                                          | 256          | short utf8 string      |          |
+| type params length                                              | 1            | byte                   |          |
+| type params list                                                | ...          | short utf8 string list |          |
+| hasExternalTypedef                                              | 1            | bool                   |          |
+| externalTypedef                                                 | 256          | short utf8 string      |          |
+| function type                                                   | 1            | byte                   |          |
+| extern type                                                     | 1            | byte                   |          |
+| isStatic                                                        | 1            | bool                   |          |
+| isConst                                                         | 1            | bool                   |          |
+| isVariadic                                                      | 1            | bool                   |          |
+| min arity                                                       | 1            | byte                   |          |
+| max arity\*                                                     | 1            | byte                   |          |
+| length of paramDecls                                            | 1            | byte                   |          |
+| list of param decls                                             | 255          | bytecode list          | true     |
+| return type or super constructor                                | 1            | enum                   |          |
+| (return type)<br><br>(has constructor name<br>constructor args) | ...          | HTTypeId               |          |
+| hasBody                                                         | 1            | bool                   |          |
+| length of body                                                  | 2            | uint16                 | true     |
+| body with endOfExec                                             | 65,535       | bytecode               | true     |
 
 arity\*:
 
@@ -184,28 +184,16 @@ This option is always true in Do statement.
 
 | Name               | Bytes length | type     | optional |
 | :----------------- | :----------- | :------- | :------- |
-| init               | ...          | bytecode |          |
+| init               | ...          | bytecode | true     |
 | HTOpCode.loopPoint | 1            | byte     |          |
 | length of loop     | 2            | uint16   |          |
-| condition          | ...          | bytecode |          |
+| condition          | ...          | bytecode | true     |
 | HTOpCode.whileStmt | 1            | byte     |          |
 | has condition      | 1            | bool     |          |
 | loop               | ...          | bytecode |          |
-| increment          | ...          | bytecode |          |
+| increment          | ...          | bytecode | true     |
 | HTOpCode.goto      | 1            | byte     |          |
 | -(length of loop)  | 1            | int16    |          |
-
-### ForIn & ForOf
-
-| Name             | Bytes length | type              | optional |
-| :--------------- | :----------- | :---------------- | :------- |
-| object           | ...          | bytecode          |          |
-| HTOpCode.forStmt | 1            | byte              |          |
-| ForStmtType      | 1            | byte              |          |
-| var decl keyword | 256          | short utf8 string |          |
-| var name         | 256          | short utf8 string |          |
-| length of loop   | 2            | uint16            |          |
-| loop             | ...          | bytecode          |          |
 
 ### When
 
