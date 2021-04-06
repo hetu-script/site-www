@@ -28,12 +28,22 @@
 
 ### TypeId
 
-| Name               | Bytes length | type              | optional |
-| :----------------- | :----------- | :---------------- | :------- |
-| id                 | 256          | short utf8 string |          |
-| length of arg list | 1            | byte              |          |
-| arg1, arg2 ...     | ...          | bytecode list     |          |
-| isNullable         | 1            | bool              |          |
+| Name                | Bytes length | type              | optional |
+| :------------------ | :----------- | :---------------- | :------- |
+| type: normal typeid | 1            | enum              |          |
+| id                  | 256          | short utf8 string |          |
+| length of arg list  | 1            | byte              |          |
+| arg1, arg2 ...      | ...          | bytecode list     |          |
+| isNullable          | 1            | bool              |          |
+
+### FunctionTypeId
+
+| Name                       | Bytes length | type        | optional |
+| :------------------------- | :----------- | :---------- | :------- |
+| type: function typeid      | 1            | enum        |          |
+| length of param type list  | 1            | byte        |          |
+| paramType1, paramType2 ... | ...          | TypeId list |          |
+| return type                | 1            | TypeId      |          |
 
 ### Anonymous funciton
 
@@ -90,28 +100,28 @@ Parameter declaration have no opcode marker at the start since it's always part 
 FunctionTypeId is not included in bytecode, the vm has to
 create the typeid according to the param types and return value type.
 
-| Name                                                            | Bytes Length | type                   | optional |
-| :-------------------------------------------------------------- | :----------- | :--------------------- | :------- |
-| id                                                              | 256          | short utf8 string      |          |
-| declId                                                          | 256          | short utf8 string      |          |
-| type params length                                              | 1            | byte                   |          |
-| type params list                                                | ...          | short utf8 string list |          |
-| hasExternalTypedef                                              | 1            | bool                   |          |
-| externalTypedef                                                 | 256          | short utf8 string      |          |
-| function type                                                   | 1            | byte                   |          |
-| extern type                                                     | 1            | byte                   |          |
-| isStatic                                                        | 1            | bool                   |          |
-| isConst                                                         | 1            | bool                   |          |
-| isVariadic                                                      | 1            | bool                   |          |
-| min arity                                                       | 1            | byte                   |          |
-| max arity\*                                                     | 1            | byte                   |          |
-| length of paramDecls                                            | 1            | byte                   |          |
-| list of param decls                                             | 255          | bytecode list          | true     |
-| return type or super constructor                                | 1            | enum                   |          |
-| (return type)<br><br>(has constructor name<br>constructor args) | ...          | HTTypeId               |          |
-| hasBody                                                         | 1            | bool                   |          |
-| length of body                                                  | 2            | uint16                 | true     |
-| body with endOfExec                                             | 65,535       | bytecode               | true     |
+| Name                                              | Bytes Length | type                   | optional |
+| :------------------------------------------------ | :----------- | :--------------------- | :------- |
+| id                                                | 256          | short utf8 string      |          |
+| declId                                            | 256          | short utf8 string      |          |
+| type params length                                | 1            | byte                   |          |
+| type params list                                  | ...          | short utf8 string list |          |
+| hasExternalTypedef                                | 1            | bool                   |          |
+| externalTypedef                                   | 256          | short utf8 string      |          |
+| function type                                     | 1            | byte                   |          |
+| extern type                                       | 1            | byte                   |          |
+| isStatic                                          | 1            | bool                   |          |
+| isConst                                           | 1            | bool                   |          |
+| isVariadic                                        | 1            | bool                   |          |
+| min arity                                         | 1            | byte                   |          |
+| max arity\*                                       | 1            | byte                   |          |
+| length of paramDecls                              | 1            | byte                   |          |
+| list of param decls                               | 255          | bytecode list          | true     |
+| return type or super constructor                  | 1            | enum                   |          |
+| (return type)<br><br>(has ctor name<br>ctor args) | ...          | HTTypeId               |          |
+| hasBody                                           | 1            | bool                   |          |
+| length of body                                    | 2            | uint16                 | true     |
+| body with endOfExec                               | 65,535       | bytecode               | true     |
 
 arity\*:
 
