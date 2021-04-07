@@ -47,6 +47,77 @@
 
 ### Anonymous funciton
 
+## Control flow
+
+### If
+
+| Name                   | Bytes length | type     | optional |
+| :--------------------- | :----------- | :------- | :------- |
+| condition              | ...          | bytecode |          |
+| HTOpCode.ifStmt        | 1            | byte     |          |
+| then branch length + 2 | 2            | uint16   |          |
+| then branch            | ...          | bytecode |          |
+| HTOpCode.goto          | 1            | byte     |          |
+| else branch length     | ...          | int16    |          |
+| else branch            | ...          | bytecode | true     |
+
+### While
+
+| Name               | Bytes length | type     | optional |
+| :----------------- | :----------- | :------- | :------- |
+| HTOpCode.loopPoint | 1            | byte     |          |
+| length of loop     | 2            | uint16   |          |
+| condition          | ...          | bytecode | true     |
+| HTOpCode.whileStmt | 1            | byte     |          |
+| has condition      | 1            | bool     |          |
+| loop               | ...          | bytecode |          |
+| HTOpCode.goto      | 1            | byte     |          |
+| -(length of loop)  | 1            | int16    |          |
+
+### Do
+
+| Name               | Bytes length | type     | optional |
+| :----------------- | :----------- | :------- | :------- |
+| HTOpCode.loopPoint | 1            | byte     |          |
+| length of loop     | 2            | uint16   |          |
+| loop               | ...          | bytecode |          |
+| condition          | ...          | bytecode |          |
+| HTOpCode.doStmt    | 1            | byte     |          |
+
+has condition \*:
+This option is always true in Do statement.
+
+### For
+
+| Name               | Bytes length | type     | optional |
+| :----------------- | :----------- | :------- | :------- |
+| init               | ...          | bytecode | true     |
+| HTOpCode.loopPoint | 1            | byte     |          |
+| length of loop     | 2            | uint16   |          |
+| condition          | ...          | bytecode | true     |
+| HTOpCode.whileStmt | 1            | byte     |          |
+| has condition      | 1            | bool     |          |
+| loop               | ...          | bytecode |          |
+| increment          | ...          | bytecode | true     |
+| HTOpCode.goto      | 1            | byte     |          |
+| -(length of loop)  | 1            | int16    |          |
+
+### When
+
+| Name                 | Bytes length | type          | optional |
+| :------------------- | :----------- | :------------ | :------- |
+| condition            | ...          | uint8 list    |          |
+| HTOpCode.whenStmt    | 1            | byte          |          |
+| has condition        | 1            | bool          |          |
+| length of cases      | 1            | byte          |          |
+| ip of case as list   | ...          | uint16 list   |          |
+| ip of branch as list | ...          | uint16 list   |          |
+| list of cases        | ...          | bytecode list |          |
+| list branchese       | ...          | bytecode list |          |
+| ip of else           | 2            | uint16        |          |
+| length of else       | 2            | uint16        |          |
+| else                 | ...          | uint8 list    |          |
+
 ## Statement
 
 ### General declaration
@@ -130,16 +201,21 @@ arity\*:
 
 ## Class declaration
 
-| Name                 | Bytes length | type              | optional |
-| :------------------- | :----------- | :---------------- | :------- |
-| id                   | 256          | short utf8 string |          |
-| type params          | ...          |                   |          |
-| class type           | 1            | byte              |          |
-| super class id       | 256          | short utf8 string |          |
-| length of func decls | 2            | uint16            |          |
-| list of func decls   | 65,535       | bytecode list     |          |
-| length of var decls  | 2            | uint16            |          |
-| list of var decls    | 65,535       | bytecode list     |          |
+| Name                         | Bytes length | type              | optional |
+| :--------------------------- | :----------- | :---------------- | :------- |
+| id                           | 256          | short utf8 string |          |
+| type params                  | ...          |                   |          |
+| class type                   | 1            | byte              |          |
+| has super class              | 1            | bool              |          |
+| super class typeid           | ...          | HTTypeId          |          |
+| has implements class         | 1            | bool              |          |
+| implements class typeid list | ...          | HTTypeId list     |          |
+| has mixin class              | 1            | bool              |          |
+| mixin class typeid           | ...          | HTTypeId list     |          |
+| length of func decls         | 2            | uint16            |          |
+| list of func decls           | 65,535       | bytecode list     |          |
+| length of var decls          | 2            | uint16            |          |
+| list of var decls            | 65,535       | bytecode list     |          |
 
 ## Enum declaration
 
@@ -149,74 +225,3 @@ arity\*:
 | isExtern          | 1            | bool                   |          |
 | length of id list | 2            | uint16                 |          |
 | list of enum ids  | 65,535       | short utf8 string list |          |
-
-## Control flow
-
-### If
-
-| Name                   | Bytes length | type     | optional |
-| :--------------------- | :----------- | :------- | :------- |
-| condition              | ...          | bytecode |          |
-| HTOpCode.ifStmt        | 1            | byte     |          |
-| then branch length + 2 | 2            | uint16   |          |
-| then branch            | ...          | bytecode |          |
-| HTOpCode.goto          | 1            | byte     |          |
-| else branch length     | ...          | int16    |          |
-| else branch            | ...          | bytecode | true     |
-
-### While
-
-| Name               | Bytes length | type     | optional |
-| :----------------- | :----------- | :------- | :------- |
-| HTOpCode.loopPoint | 1            | byte     |          |
-| length of loop     | 2            | uint16   |          |
-| condition          | ...          | bytecode | true     |
-| HTOpCode.whileStmt | 1            | byte     |          |
-| has condition      | 1            | bool     |          |
-| loop               | ...          | bytecode |          |
-| HTOpCode.goto      | 1            | byte     |          |
-| -(length of loop)  | 1            | int16    |          |
-
-### Do
-
-| Name               | Bytes length | type     | optional |
-| :----------------- | :----------- | :------- | :------- |
-| HTOpCode.loopPoint | 1            | byte     |          |
-| length of loop     | 2            | uint16   |          |
-| loop               | ...          | bytecode |          |
-| condition          | ...          | bytecode |          |
-| HTOpCode.doStmt    | 1            | byte     |          |
-
-has condition \*:
-This option is always true in Do statement.
-
-### For
-
-| Name               | Bytes length | type     | optional |
-| :----------------- | :----------- | :------- | :------- |
-| init               | ...          | bytecode | true     |
-| HTOpCode.loopPoint | 1            | byte     |          |
-| length of loop     | 2            | uint16   |          |
-| condition          | ...          | bytecode | true     |
-| HTOpCode.whileStmt | 1            | byte     |          |
-| has condition      | 1            | bool     |          |
-| loop               | ...          | bytecode |          |
-| increment          | ...          | bytecode | true     |
-| HTOpCode.goto      | 1            | byte     |          |
-| -(length of loop)  | 1            | int16    |          |
-
-### When
-
-| Name                 | Bytes length | type          | optional |
-| :------------------- | :----------- | :------------ | :------- |
-| condition            | ...          | uint8 list    |          |
-| HTOpCode.whenStmt    | 1            | byte          |          |
-| has condition        | 1            | bool          |          |
-| length of cases      | 1            | byte          |          |
-| ip of case as list   | ...          | uint16 list   |          |
-| ip of branch as list | ...          | uint16 list   |          |
-| list of cases        | ...          | bytecode list |          |
-| list branchese       | ...          | bytecode list |          |
-| ip of else           | 2            | uint16        |          |
-| length of else       | 2            | uint16        |          |
-| else                 | ...          | uint8 list    |          |
