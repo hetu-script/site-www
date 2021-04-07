@@ -1,6 +1,6 @@
 # Syntax referrence
 
-Hetu's grammar close to most modern languages, hence need very little time to get familar with.
+Hetu's grammar close to most modern languages, it need very little time to get familar with.
 
 Key characteristics of Hetu:
 
@@ -185,9 +185,8 @@ when (condition) {
   expr : {
 
   }
-  expr : {
-
-  }
+  expr :
+  // will not fall through here
   else : {
 
   }
@@ -196,10 +195,13 @@ when (condition) {
 
 ## Function
 
-Function is declared with [fun], [get], [set], [construct]. the function name, parameter list, return type and function body are all optional. For functions with no parameters, the empty brackets are also optional.
+Function is declared with [fun], [get], [set], [construct]. The parameter list, return type and function body are all optional. For functions with no parameters, the empty brackets are also optional.
+If this is a function expression (or literal function, or anonymous function) the function name is also optional.
 
 ```typescript
-fun doubleIt(n: num): num => n * 2
+fun doubleIt(n: num) -> num {
+  return n * 2
+}
 
 fun main {
   def x = doubleIt(7) // expect 14
@@ -207,29 +209,26 @@ fun main {
 }
 ```
 
-For functions declared with [fun], when no return type is provided in declaration, it will have a return type of [any]. And it will return null if you didn't write return statement within the definition body.
-
-Member functions can also be declared with [get], [set], [construct], they literally means getter, setter and contructor function.
-
-If a class have a getter or setter function. You can use 'class_name.func_name' to get or set the value hence get rid of the empty brackets.
-
-Function can have no name, it will then become a literal function expression(anonymous function).
-
-Functions can be nested, and nested functions can have names.
-
-Function are first class, you can use function as parameter, return value and store them in variables.
-
-Function can write in forms with fun => expr when there's only one exression as the body.
+- For functions declared with [fun], when no return type is provided in declaration, it will have a return type of [any]. And it will return null if you didn't write return statement within the definition body.
+- Member functions can also be declared with [get], [set], [construct], they literally means getter, setter and contructor function.
+- If a class have a getter or setter function. You can use 'class_name.func_name' to get or set the value hence get rid of the empty brackets.
+- Function can have no name, it will then become a literal function expression(anonymous function).
+- Functions can be nested, and nested functions can have names.
+- Function are first class, you can use function as parameter, return value and store them in variables.
+- Function must be within a block statement (within '{' and '}').
+- Return type is marked by a single arrow ('->') after the parameters.
 
 ```typescript
 fun closure(func) {
   var i = 42
-  fun nested => i = i + 1
+  fun nested {
+    return i = i + 1
+  }
   return nested
 }
 
 fun main {
-  var func = closure( fun (n) => n * n )
+  var func = closure( fun (n) { return n * n } )
   print(func()) // print: 1849
   print(func()) // print: 1936
 }
@@ -237,13 +236,10 @@ fun main {
 
 ## Class
 
-Class can have static variables and methods. Which can be accessed through the class name (rather than a instance).
-
-Class's member functions (methods) can use keyword: construct, get, set to define a constructor, getter, setter function.
-
-Constructors have no function names and cannot return values. They will return a instance.
-
-Getter & setter functions can be used as a member variable. They can be accessed without brackets.
+- Class can have static variables and methods. Which can be accessed through the class name.
+- Class's member functions (methods) use special keyword: construct, get, set, to define a constructor, getter, setter function.
+- Constructors can be with no function name and cannot return values. When calling they will always return a instance.
+- Getter & setter functions can be used feels like a member variable. They can be accessed without brackets.
 
 ```typescript
 // class definition
@@ -254,7 +250,7 @@ class Calculator {
   // static private member
   static var _name = 'the calculator'
   // static get function
-  static get name: str {
+  static get name -> str {
     return _name
   }
   // static set function
@@ -272,7 +268,7 @@ class Calculator {
     this.y = y
   }
   // method with return type
-  fun meaning: num {
+  fun meaning -> num {
     // when no shadowing, `this` keyword can be omitted
     return x * y
   }
@@ -286,5 +282,7 @@ Use import statement to import content from another script file.
 ```dart
 import 'hello.ht'
 
-fun main => hello()
+fun main {
+  hello()
+}
 ```

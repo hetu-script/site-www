@@ -2,7 +2,7 @@
 
 | Description    | Operator                  | Associativity | Precedence |
 | :------------- | :------------------------ | :-----------: | :--------: |
-| Unary postfix  | e., e(), e[], e++, e--    |     None      |     16     |
+| Unary postfix  | e., e1[e2], e(), e++, e-- |     None      |     16     |
 | Unary prefix   | -e, !e, ++e, --e          |     None      |     15     |
 | Multiplicative | \*, /, %                  |     Left      |     14     |
 | Additive       | +, -                      |     Left      |     13     |

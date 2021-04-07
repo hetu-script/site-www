@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/docs/assets/style.56d02f33.css">
     <link rel="modulepreload" href="/docs/assets/Home.4a0d074c.js">
     <link rel="modulepreload" href="/docs/assets/app.fcd827d0.js">
-    <link rel="modulepreload" href="/docs/assets/en-US_binding_index.md.e8817b54.lean.js">
+    <link rel="modulepreload" href="/docs/assets/en-US_binding_index.md.47ca9008.lean.js">
     <link rel="modulepreload" href="/docs/assets/app.fcd827d0.js">
     
     
@@ -52,7 +52,7 @@
 <span class="token punctuation">}</span>
 </code></pre></div><p>And the output should be:</p><div class="language-"><pre><code>dart value: {greeting: hello}
 hetu value: {greeting: hello, foo: bar}
-</code></pre></div><h2 id="typedef-for-unwrap-hetu-function-into-dart-function"><a class="header-anchor" href="#typedef-for-unwrap-hetu-function-into-dart-function" aria-hidden="true">#</a> Typedef for unwrap Hetu function into Dart function</h2><p>In Hetu script:</p><div class="language-dart"><pre><code>fun <span class="token punctuation">[</span>DartFunction<span class="token punctuation">]</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> num<span class="token punctuation">,</span> b<span class="token punctuation">:</span> num<span class="token punctuation">)</span><span class="token punctuation">:</span> num <span class="token punctuation">{</span>
+</code></pre></div><h2 id="typedef-for-unwrap-hetu-function-into-dart-function"><a class="header-anchor" href="#typedef-for-unwrap-hetu-function-into-dart-function" aria-hidden="true">#</a> Typedef for unwrap Hetu function into Dart function</h2><p>In Hetu script:</p><div class="language-dart"><pre><code>fun <span class="token punctuation">[</span>DartFunction<span class="token punctuation">]</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> num<span class="token punctuation">,</span> b<span class="token punctuation">:</span> num<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> num <span class="token punctuation">{</span>
   <span class="token keyword">return</span> a <span class="token operator">+</span> b
 <span class="token punctuation">}</span>
 
@@ -76,7 +76,7 @@ int <span class="token function">hetuAdd</span><span class="token punctuation">(
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre></div><p>The typedef of the unwrapper is:</p><div class="language-dart"><pre><code><span class="token keyword">typedef</span> HTExternalFunctionTypedef <span class="token operator">=</span> <span class="token keyword">Function</span> <span class="token keyword">Function</span><span class="token punctuation">(</span>HTFunction hetuFunction<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre></div><h2 id="auto-binding-tools"><a class="header-anchor" href="#auto-binding-tools" aria-hidden="true">#</a> Auto-Binding tools</h2><p>Thanks to <a href="https://github.com/rockingdice" target="_blank" rel="noopener noreferrer">rockingdice</a> we now have an automated tool for auto-generate both Dart-side and Hetu-side binding declarations for any Dart classes.</p><p>Please check out this repository: <a href="https://github.com/hetu-script/hetu-script-autobinding" target="_blank" rel="noopener noreferrer">hetu-script-autobinding</a></p></div></div><footer class="page-footer" data-v-d36a7fda data-v-5a019cc9><div class="edit" data-v-5a019cc9><div class="edit-link" data-v-5a019cc9 data-v-fb0131f2><!----></div></div><div class="updated" data-v-5a019cc9><!----></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"en-us_index.md\":\"bc7aebaa\",\"zh-hans_index.md\":\"c71777d5\",\"en-us_binding_index.md\":\"e8817b54\",\"en-us_bytecode_specification_index.md\":\"973d85c6\",\"en-us_operator_precedence_index.md\":\"78c4bfbf\",\"en-us_syntax_index.md\":\"4c17d642\"}")</script>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"en-us_index.md\":\"71764c7c\",\"zh-hans_index.md\":\"1225dc42\",\"en-us_binding_index.md\":\"47ca9008\",\"en-us_bytecode_specification_index.md\":\"f93998be\",\"en-us_operator_precedence_index.md\":\"cf9c4712\",\"en-us_syntax_index.md\":\"d8dd025c\"}")</script>
     <script type="module" async src="/docs/assets/app.fcd827d0.js"></script>
   </body>
 </html>

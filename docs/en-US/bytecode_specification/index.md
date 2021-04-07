@@ -9,7 +9,7 @@
 | HTOpCode.goto | 1            | byte  |          |
 | distance      | 2            | int16 |          |
 
-### OpCode.goto
+### OpCode.logicalAnd
 
 | Name                 | Bytes length | type     | optional |
 | :------------------- | :----------- | :------- | :------- |
@@ -26,7 +26,7 @@
 | length of string | 1            | byte     |          |
 | utf8 string      | 255          | bytecode |          |
 
-### TypeId
+### Type
 
 | Name                | Bytes length | type              | optional |
 | :------------------ | :----------- | :---------------- | :------- |
@@ -36,13 +36,27 @@
 | arg1, arg2 ...      | ...          | bytecode list     |          |
 | isNullable          | 1            | bool              |          |
 
-### FunctionTypeId
+### ParameterType
+
+| Name                | Bytes length | type              | optional |
+| :------------------ | :----------- | :---------------- | :------- |
+| type: normal typeid | 1            | enum              |          |
+| id                  | 256          | short utf8 string |          |
+| length of arg list  | 1            | byte              |          |
+| arg1, arg2 ...      | ...          | bytecode list     |          |
+| isNullable          | 1            | bool              |          |
+| isOptional          | 1            | bool              |          |
+| isNamed             | 1            | bool              |          |
+| isVariadic          | 1            | bool              |          |
+
+### FunctionType
 
 | Name                       | Bytes length | type        | optional |
 | :------------------------- | :----------- | :---------- | :------- |
 | type: function typeid      | 1            | enum        |          |
 | length of param type list  | 1            | byte        |          |
 | paramType1, paramType2 ... | ...          | TypeId list |          |
+| minarity                   | 1            | byte        |          |
 | return type                | 1            | TypeId      |          |
 
 ### Anonymous funciton
@@ -189,7 +203,7 @@ create the typeid according to the param types and return value type.
 | length of paramDecls                              | 1            | byte                   |          |
 | list of param decls                               | 255          | bytecode list          | true     |
 | return type or super constructor                  | 1            | enum                   |          |
-| (return type)<br><br>(has ctor name<br>ctor args) | ...          | HTTypeId               |          |
+| (return type)<br><br>(has ctor name<br>ctor args) | ...          | HTType                 |          |
 | hasBody                                           | 1            | bool                   |          |
 | length of body                                    | 2            | uint16                 | true     |
 | body with endOfExec                               | 65,535       | bytecode               | true     |

@@ -77,7 +77,7 @@ hetu value: {greeting: hello, foo: bar}
 In Hetu script:
 
 ```dart
-fun [DartFunction] add(a: num, b: num): num {
+fun [DartFunction] add(a: num, b: num) -> num {
   return a + b
 }
 

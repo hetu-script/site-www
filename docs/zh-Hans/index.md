@@ -43,7 +43,9 @@ class Person {
   construct (name: str) {
     this.name = name
   }
-  fun greeting => print('Hi! I\'m', name)
+  fun greeting {
+    print('Hi! I\'m', name)
+  }
 }
 
 // This is where the script starts executing.
@@ -116,7 +118,7 @@ If you want to write multiple line in REPL mode, use '\\' to end a line.
 ```typescript
 >>>fun hello {\
 return 6 * 7} // press enter
-function hello(): any // repl will print out the eval result (in this case the type of this function)
+function hello() -> any // repl will print out the eval result (in this case the type of this function)
 >>>hello()
 42 // repl print
 >>>
