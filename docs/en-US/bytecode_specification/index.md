@@ -194,17 +194,18 @@ create the typeid according to the param types and return value type.
 | hasExternalTypedef                                | 1            | bool                   |          |
 | externalTypedef                                   | 256          | short utf8 string      |          |
 | function type                                     | 1            | byte                   |          |
-| extern type                                       | 1            | byte                   |          |
+| isExtern                                          | 1            | bool                   |          |
 | isStatic                                          | 1            | bool                   |          |
 | isConst                                           | 1            | bool                   |          |
 | isVariadic                                        | 1            | bool                   |          |
 | min arity                                         | 1            | byte                   |          |
 | max arity\*                                       | 1            | byte                   |          |
+| has paramDecls                                    | 1            | bool                   |          |
 | length of paramDecls                              | 1            | byte                   |          |
 | list of param decls                               | 255          | bytecode list          | true     |
 | return type or super constructor                  | 1            | enum                   |          |
 | (return type)<br><br>(has ctor name<br>ctor args) | ...          | HTType                 |          |
-| hasBody                                           | 1            | bool                   |          |
+| has body                                          | 1            | bool                   |          |
 | length of body                                    | 2            | uint16                 | true     |
 | body with endOfExec                               | 65,535       | bytecode               | true     |
 
@@ -219,13 +220,15 @@ arity\*:
 | :--------------------------- | :----------- | :---------------- | :------- |
 | id                           | 256          | short utf8 string |          |
 | type params                  | ...          |                   |          |
-| class type                   | 1            | byte              |          |
+| isExtern                     | 1            | bool              |          |
+| isAbstract                   | 1            | bool              |          |
 | has super class              | 1            | bool              |          |
 | super class typeid           | ...          | HTTypeId          |          |
 | has implements class         | 1            | bool              |          |
 | implements class typeid list | ...          | HTTypeId list     |          |
 | has mixin class              | 1            | bool              |          |
 | mixin class typeid           | ...          | HTTypeId list     |          |
+| has body                     | 1            | bool              |          |
 | length of func decls         | 2            | uint16            |          |
 | list of func decls           | 65,535       | bytecode list     |          |
 | length of var decls          | 2            | uint16            |          |
