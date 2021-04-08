@@ -26,6 +26,18 @@
 | length of string | 1            | byte     |          |
 | utf8 string      | 255          | bytecode |          |
 
+### Local value symbol
+
+| Name                   | Bytes length | type              | optional |
+| :--------------------- | :----------- | :---------------- | :------- |
+| HTOpCode.local         | 1            | byte              |          |
+| HTValueTypeCode.symbol | 1            | byte              |          |
+| id                     | 256          | short utf8 string |          |
+| isGetKey               | 1            | bool              |          |
+| has type args          | 1            | bool              |          |
+| length of type args    | 1            | byte              |          |
+| arg1, arg2 ...         | ...          | bytecode list     |          |
+
 ### Type
 
 | Name                | Bytes length | type              | optional |
