@@ -31,7 +31,17 @@ module.exports = {
         nav: [
           { text: 'Introduction', link: '/en-US/#introduction' },
           { text: 'Syntax', link: '/en-US/syntax/#script-style' },
-          { text: 'Binding', link: '/en-US/binding/#function' },
+          {
+            text: 'Tool',
+            items: [
+              { text: 'Binding', link: '/en-US/binding/#function' },
+              {
+                text: 'IDE Extension',
+                link:
+                  'https://marketplace.visualstudio.com/items?itemName=hetu-script.hetuscript',
+              },
+            ],
+          },
           {
             text: 'Referrence',
             items: [

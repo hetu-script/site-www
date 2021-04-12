@@ -109,8 +109,8 @@ fun main {
   for (;;) {
     ++i
     when (i % 2) {
-      0: print('even:', i)
-      1: print('odd:', i)
+      0 -> print('even:', i)
+      1 -> print('odd:', i)
       else: print('never going to happen.')
     }
     if (i > 5) {
@@ -182,13 +182,13 @@ for (var/let/const varName in list) {
 
 ```dart
 when (condition) {
-  expr : {
-
+  expr -> // ...single expression...
+  expr -> {
+    // ...block statement...
   }
-  expr :
   // will not fall through here
   else : {
-
+    // ...
   }
 }
 ```
