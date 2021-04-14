@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/docs/assets/style.56d02f33.css">
     <link rel="modulepreload" href="/docs/assets/Home.50f07171.js">
     <link rel="modulepreload" href="/docs/assets/app.23e167d7.js">
-    <link rel="modulepreload" href="/docs/assets/en-US_binding_index.md.1ab2d821.lean.js">
+    <link rel="modulepreload" href="/docs/assets/en-US_binding_index.md.e938e35a.lean.js">
     <link rel="modulepreload" href="/docs/assets/app.23e167d7.js">
     
     
@@ -59,7 +59,7 @@ hetu value: {greeting: hello, foo: bar}
 fun getFunc <span class="token punctuation">{</span>
   <span class="token keyword">return</span> add
 <span class="token punctuation">}</span>
-</code></pre></div><p>Then when you evaluate this [add] function in Hetu, you will get a native Dart function.</p><div class="language-dart"><pre><code><span class="token keyword">typedef</span> DartFunction <span class="token operator">=</span> int <span class="token keyword">Function</span><span class="token punctuation">(</span>int a<span class="token punctuation">,</span> int b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Then when you evaluate this [add] function in Hetu, you will get a native Dart function. This grammar could also be used on literal function, this is especially usefull when you try to bind callback function to a dart widget.</p><div class="language-dart"><pre><code><span class="token keyword">typedef</span> DartFunction <span class="token operator">=</span> int <span class="token keyword">Function</span><span class="token punctuation">(</span>int a<span class="token punctuation">,</span> int b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 int <span class="token function">hetuAdd</span><span class="token punctuation">(</span>DartFunction func<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">var</span> func <span class="token operator">=</span> hetu<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span><span class="token string">&#39;getFunc&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -76,7 +76,7 @@ int <span class="token function">hetuAdd</span><span class="token punctuation">(
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre></div><p>The typedef of the unwrapper is:</p><div class="language-dart"><pre><code><span class="token keyword">typedef</span> HTExternalFunctionTypedef <span class="token operator">=</span> <span class="token keyword">Function</span> <span class="token keyword">Function</span><span class="token punctuation">(</span>HTFunction hetuFunction<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre></div><h2 id="auto-binding-tools"><a class="header-anchor" href="#auto-binding-tools" aria-hidden="true">#</a> Auto-Binding tools</h2><p>Thanks to <a href="https://github.com/rockingdice" target="_blank" rel="noopener noreferrer">rockingdice</a> we now have an automated tool for auto-generate both Dart-side and Hetu-side binding declarations for any Dart classes.</p><p>Please check out this repository: <a href="https://github.com/hetu-script/hetu-script-autobinding" target="_blank" rel="noopener noreferrer">hetu-script-autobinding</a></p></div></div><footer class="page-footer" data-v-d36a7fda data-v-5a019cc9><div class="edit" data-v-5a019cc9><div class="edit-link" data-v-5a019cc9 data-v-fb0131f2><!----></div></div><div class="updated" data-v-5a019cc9><!----></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"en-us_index.md\":\"4aed1783\",\"zh-hans_index.md\":\"b63a87e6\",\"en-us_binding_index.md\":\"1ab2d821\",\"en-us_bytecode_specification_index.md\":\"5903c7e5\",\"en-us_operator_precedence_index.md\":\"bb593f2d\",\"en-us_syntax_index.md\":\"5f9aaaa9\"}")</script>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"en-us_index.md\":\"4aed1783\",\"zh-hans_index.md\":\"b63a87e6\",\"en-us_binding_index.md\":\"e938e35a\",\"en-us_bytecode_specification_index.md\":\"b3659028\",\"en-us_operator_precedence_index.md\":\"bb593f2d\",\"en-us_syntax_index.md\":\"69d44921\"}")</script>
     <script type="module" async src="/docs/assets/app.23e167d7.js"></script>
   </body>
 </html>

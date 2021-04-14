@@ -87,6 +87,7 @@ fun getFunc {
 ```
 
 Then when you evaluate this [add] function in Hetu, you will get a native Dart function.
+This grammar could also be used on literal function, this is especially usefull when you try to bind callback function to a dart widget.
 
 ```dart
 typedef DartFunction = int Function(int a, int b);

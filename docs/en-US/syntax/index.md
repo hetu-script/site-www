@@ -93,10 +93,24 @@ A little difference from Dart is that you have to write a curly brackets even if
 
 ## Type declaration
 
-Typename is not evaluated when declared, hence you can declare a variable with an non-exist type. However if you do this, you cannot assign it with any value.
+Type is a variable in Hetu, it can be assigned and returned.
+The type of a type is always 'type', no matter it's a primitive, instance, or function type.
+Use 'runtimeType' to get the runtime type of a value.
 
 ```typescript
-var i: NotAType; // not an error
+fun main {
+  // decalre a function typedef
+  var funcTypedef: type = fun(str) -> num
+  // assign a function to a value of a certain function type
+  var numparse: funcTypedef = fun(value: str) -> num { return num.parse(value) }
+  // get a value's runtime type and return it from a function
+  var getType = fun { return numparse.runtimeType }
+  var funcTypedef2 = getType()
+  // use this new type
+  var strlength: funcTypedef2 = fun(value: str) -> num { return value.length }
+  // expected output: 11
+  print(strlength('hello world'))
+}
 ```
 
 ## Control flow
@@ -111,7 +125,7 @@ fun main {
     when (i % 2) {
       0 -> print('even:', i)
       1 -> print('odd:', i)
-      else: print('never going to happen.')
+      else -> print('never going to happen.')
     }
     if (i > 5) {
       break
@@ -120,11 +134,11 @@ fun main {
 }
 ```
 
-### if
+### If
 
-- if statement's condition expression must be bool.
-- if statement's then branch and else branch's curly brackets is optional.
-- if statement's branches could be a single statement without brackets.
+- 'if' statement's condition expression must be bool.
+- 'if' statement's then branch and else branch's curly brackets is optional.
+- 'if' statement's branches could be a single statement without brackets.
 
 ```dart
 if (condition) {
@@ -134,10 +148,10 @@ if (condition) {
 }
 ```
 
-### while
+### While
 
-- while statement's condition is optional. If the condition is omitted, then it's equal to 'while (true)'.
-- while statement's body could be a single statement without brackets.
+- 'while' statement's condition is optional. If the condition is omitted, then it's equal to 'while (true)'.
+- 'while' statement's body could be a single statement without brackets.
 
 ```dart
 while (condition) {
@@ -145,10 +159,10 @@ while (condition) {
 }
 ```
 
-### do
+### Do
 
-- do statement's condition is NOT optional.
-- do statement's body could be a single statement without brackets.
+- 'do' statement's condition is NOT optional.
+- 'do' statement's body could be a single statement without brackets.
 
 ```dart
 do {
@@ -156,11 +170,11 @@ do {
 } while (condition)
 ```
 
-### for
+### For
 
-- for statement's expr must be separated with ';'.
+- 'for' statement's expr must be separated with ';'.
 - The expression itself is optional. If you write 'for (;;)', it will be the same to 'while (true)'
-- for statement's body must be enclosed in curly brackets.
+- 'for' statement's body must be enclosed in curly brackets.
 - When use for...in, the loop will iterate through the keys of a list.
 
 ```dart
@@ -173,12 +187,12 @@ for (var/let/const varName in list) {
 }
 ```
 
-### when
+### When
 
-- when statement's condition is optional.
-- when statement's case could be non-const expression or variables;
-- when statement's body must be enclosed in curly brackets. However, the case branch cloud be a single statement without brackets;
-- when statement's else branch is optional.
+- 'when' statement's condition is optional. If not provided, the interpreter will check the cases and jump to the first branch if the expression evaled as true. In this case, the when statement is more like a if else statement except with a little more efficiency because it won't go through every branch.
+- 'when' statement's case could be non-const expression or variables;
+- 'when' statement's body must be enclosed in curly brackets. However, the case branch could be a single statement without brackets;
+- 'when' statement's else branch is optional.
 
 ```dart
 when (condition) {
@@ -217,6 +231,7 @@ fun main {
 - Function are first class, you can use function as parameter, return value and store them in variables.
 - Function must be within a block statement (within '{' and '}').
 - Return type is marked by a single arrow ('->') after the parameters.
+- If a literal function is declared without a definition body, then it is deemed as a function type rather than an function definition.
 
 ```typescript
 fun closure(func) {

@@ -159,6 +159,8 @@ This option is always true in Do statement.
 | hasType               | 1            | bool              |          |
 | TypeId                | ...          | TypeId            |          |
 | hasInitializer        | 1            | bool              |          |
+| initializer line      | 2            | uint16            |          |
+| initializer column    | 2            | uint16            |          |
 | length of initializer | 2            | uint16            | true     |
 | init with endOfExec   | 65,535       | bytecode          | true     |
 
@@ -175,6 +177,8 @@ Parameter declaration have no opcode marker at the start since it's always part 
 | hasType               | 1            | bool              |          |
 | TypeId                | ...          | TypeId            |          |
 | hasInitializer        | 1            | bool              |          |
+| initializer line      | 2            | uint16            |          |
+| initializer column    | 2            | uint16            |          |
 | length of initializer | 2            | uint16            | true     |
 | init with endOfExec   | 65,535       | bytecode          | true     |
 
@@ -218,6 +222,8 @@ create the typeid according to the param types and return value type.
 | return type or super constructor                  | 1            | enum                   |          |
 | (return type)<br><br>(has ctor name<br>ctor args) | ...          | HTType                 |          |
 | has body                                          | 1            | bool                   |          |
+| body line                                         | 2            | uint16                 |          |
+| body column                                       | 2            | uint16                 |          |
 | length of body                                    | 2            | uint16                 | true     |
 | body with endOfExec                               | 65,535       | bytecode               | true     |
 
