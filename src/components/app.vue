@@ -29,11 +29,19 @@
         >
       </div>
     </div>
-    <p align="center">
-      <a title="Pub" href="https://pub.dev/packages/hetu_script" ><img src="https://img.shields.io/pub/v/hetu_script" /></a>
-      <a title="VSCode Extension" href="https://marketplace.visualstudio.com/items?itemName=hetu-script.hetuscript" ><img src="https://vsmarketplacebadge.apphb.com/version/hetu-script.hetuscript.svg" /></a>
-      <a title="Discord" href="https://discord.gg/sTF73qcS" ><img src="https://img.shields.io/discord/829269197727989760" /></a>
-    </p>
+    <div class="row">
+      <div class="col pt-5">
+        <a title="Pub" href="https://pub.dev/packages/hetu_script" ><img src="https://img.shields.io/pub/v/hetu_script" /></a>
+      </div>
+      <div class="col pt-5">
+        <a title="VSCode Extension" href="https://marketplace.visualstudio.com/items?itemName=hetu-script.hetuscript" >
+          <img src="https://vsmarketplacebadge.apphb.com/version/hetu-script.hetuscript.svg" />
+        </a>
+      </div>
+      <div class="col pt-5">
+        <a title="Discord" href="https://discord.gg/sTF73qcS" ><img src="https://img.shields.io/discord/829269197727989760" /></a>
+      </div>
+    </div>
     <footer-bar></footer-bar>
   </div>
 </template>
