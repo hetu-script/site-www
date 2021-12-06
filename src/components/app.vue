@@ -19,7 +19,7 @@
     </div>
     <div class="row">
       <div class="col pt-5 text-end">
-        <a class="btn doc-btn" href="/docs/en-US/introduction/">Get Started</a>
+        <a class="btn doc-btn" href="/docs/en-US/">Get Started</a>
       </div>
       <div class="col pt-5 text-start">
         <a
