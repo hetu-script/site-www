@@ -1,4 +1,4 @@
-import{_ as n,c as s,o as a,a as t}from"./app.7121ab72.js";const y='{"title":"Analyzer - Hetu Script Language","description":"","frontmatter":{"title":"Analyzer - Hetu Script Language"},"relativePath":"docs/en-US/analyzer/index.md","lastUpdated":1638780808875}',p={},o=t(`<h1 id="analyzer" tabindex="-1">Analyzer <a class="header-anchor" href="#analyzer" aria-hidden="true">#</a></h1><p>Analyzer is a standalone utility class for analyze a Hetu source.</p><p>Example:</p><div class="language-dart"><pre><code><span class="token keyword">import</span> <span class="token string">&#39;package:hetu_script/analyzer.dart&#39;</span><span class="token punctuation">;</span>
+import{_ as n,c as a,o as s,a as t}from"./app.3aade5d0.js";const y='{"title":"Analyzer - Hetu Script Language","description":"","frontmatter":{"title":"Analyzer - Hetu Script Language"},"relativePath":"docs/en-US/analyzer/index.md","lastUpdated":1638793390931}',p={},o=t(`<h1 id="analyzer" tabindex="-1">Analyzer <a class="header-anchor" href="#analyzer" aria-hidden="true">#</a></h1><p>Analyzer is a standalone utility class for analyze a Hetu source.</p><p>Example:</p><div class="language-dart"><pre><code><span class="token keyword">import</span> <span class="token string">&#39;package:hetu_script/analyzer.dart&#39;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">final</span> hetu <span class="token operator">=</span> <span class="token class-name">HTAnalyzer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -20,4 +20,4 @@ import{_ as n,c as s,o as a,a as t}from"./app.7121ab72.js";const y='{"title":"An
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-</code></pre></div>`,4),e=[o];function c(u,l,i,r,k,d){return a(),s("div",null,e)}var f=n(p,[["render",c]]);export{y as __pageData,f as default};
+</code></pre></div>`,4),e=[o];function c(u,l,i,r,k,d){return s(),a("div",null,e)}var f=n(p,[["render",c]]);export{y as __pageData,f as default};
