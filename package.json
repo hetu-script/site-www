@@ -4,8 +4,8 @@
   "description": "Official website of Hetu script language.",
   "main": "index.js",
   "scripts": {
-    "dev": "npx webpack --config webpack.config.js --progress --watch",
-    "build": "npx webpack --config webpack.config.js",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
