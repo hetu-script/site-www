@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col pt-5 fs-2">Hetu Script Language</div>
+      <div class="col pt-5 fs-2 title">Hetu Script Language</div>
     </div>
     <div class="row">
       <div class="col pt-2">
@@ -17,11 +17,14 @@
         apps.
       </div>
     </div>
-    <div class="row">
-      <div class="col pt-5 text-end">
+    <div class="row justify-content-center">
+      <div class="col-2 py-5 text-nowrap text-end">
         <a class="btn doc-btn" href="/docs/en-US/">Get Started</a>
       </div>
-      <div class="col pt-5 text-start">
+      <div class="col-2 py-5 text-nowrap">
+        <a class="btn playground-btn" href="/codepad/">Playground</a>
+      </div>
+      <div class="col-2 py-5 text-nowrap text-start">
         <a
           class="btn github-btn"
           href="https://github.com/hetu-script/hetu-script"
@@ -47,6 +50,7 @@
         </a>
       </div>
     </div>
+    
     <footer-bar></footer-bar>
   </div>
 </template>
@@ -66,6 +70,10 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  color: green
+}
+
 .top-space {
   height: 120px;
 }
@@ -84,7 +92,16 @@ export default {
 
 .doc-btn:hover {
   background-color: #61b464;
+}
+
+.playground-btn {
+  background-color: #188ec5;
   color: white;
+  transition: 0.3s;
+}
+
+.playground-btn:hover {
+  background-color: #49b5e7;
 }
 
 .github-btn {
@@ -95,6 +112,5 @@ export default {
 
 .github-btn:hover {
   background-color: #ecedf3;
-  color: gray;
 }
 </style>
