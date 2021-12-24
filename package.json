@@ -4,8 +4,9 @@
   "description": "Official website of Hetu script language.",
   "main": "index.js",
   "scripts": {
-    "dev": "npx webpack --config webpack.config.js --progress --watch",
-    "build": "npx webpack --config webpack.config.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,22 +20,11 @@
   },
   "homepage": "https://github.com/hetu-script/site-www#readme",
   "dependencies": {
-    "@babel/runtime": "^7.13.10",
-    "@vue/compiler-dom": "^3.0.11",
-    "@vue/runtime-dom": "^3.0.11",
-    "vue": "^3.0.11"
+    "vue": "^3.2.26"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.14",
-    "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.13.12",
-    "@vue/compiler-sfc": "^3.0.11",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.0",
-    "mini-css-extract-plugin": "^1.4.0",
-    "style-loader": "^2.0.0",
-    "vue-loader": "^16.2.0",
-    "webpack": "^5.30.0",
-    "webpack-cli": "^4.6.0"
+    "@types/node": "^17.0.2",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "vite": "^2.7.6"
   }
 }

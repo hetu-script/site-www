@@ -1,75 +1,73 @@
-<template>
-  <div class="container text-center w-auto p-3">
-    <div class="row">
-      <div class="col top-space"></div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <img class="logo" src="/image/hetu-logo-large.png" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col pt-5 fs-2 title">Hetu Script Language</div>
-    </div>
-    <div class="row">
-      <div class="col pt-2">
-        A lightweight script language written in Dart for embedding in Flutter
-        apps.
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-2 py-5 text-nowrap text-end">
-        <a class="btn doc-btn" href="/docs/en-US/">Get Started</a>
-      </div>
-      <div class="col-2 py-5 text-nowrap">
-        <a class="btn playground-btn" href="/codepad/">Playground</a>
-      </div>
-      <div class="col-2 py-5 text-nowrap text-start">
-        <a
-          class="btn github-btn"
-          href="https://github.com/hetu-script/hetu-script"
-          >Github</a
-        >
-      </div>
-    </div>
-    <div class="row">
-      <div class="col pt-2">
-        <a class="mx-2" title="Pub" href="https://pub.dev/packages/hetu_script">
-          <img src="https://img.shields.io/pub/v/hetu_script" />
-        </a>
-        <a
-          title="VSCode Extension"
-          href="https://marketplace.visualstudio.com/items?itemName=hetu-script.hetuscript"
-        >
-          <img
-            src="https://vsmarketplacebadge.apphb.com/version/hetu-script.hetuscript.svg"
-          />
-        </a>
-        <a class="mx-2" title="Discord" href="https://discord.gg/sTF73qcS">
-          <img src="https://img.shields.io/discord/829269197727989760" />
-        </a>
-      </div>
-    </div>
-    
-    <footer-bar></footer-bar>
-  </div>
-</template>
+<script setup>
+import Footer from "./footer.vue";
 
-<script>
-import FooterBar from "./footerBar.vue";
-
-export default {
-  name: "App",
-  components: {
-    FooterBar,
-  },
-  data() {
-    return {};
-  },
-};
 </script>
 
-<style scoped>
+<template>
+  <div class="spacer">
+    <div class="container text-center pt-5">
+      <div class="row">
+        <div class="col top-space"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img class="logo" src="/image/hetu-logo-large.png" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col pt-5 fs-2 title">Hetu Script Language</div>
+      </div>
+      <div class="row">
+        <div class="col pt-2">
+          A lightweight script language written in Dart for embedding in Flutter
+          apps.
+        </div>
+      </div>
+      <div class="row pt-4 justify-content-center">
+        <div class="col-2 text-nowrap text-end">
+          <a class="btn doc-btn" href="/docs/en-US/">Get Started</a>
+        </div>
+        <div class="col-2 text-nowrap">
+          <a class="btn playground-btn" href="/codepad/">Playground</a>
+        </div>
+        <div class="col-2 text-nowrap text-start">
+          <a
+            class="btn github-btn"
+            href="https://github.com/hetu-script/hetu-script"
+            >Github</a
+          >
+        </div>
+      </div>
+      <div class="row pt-4">
+        <div class="col">
+          <a class="mx-2" title="Pub" href="https://pub.dev/packages/hetu_script">
+            <img src="https://img.shields.io/pub/v/hetu_script" />
+          </a>
+          <a
+            title="VSCode Extension"
+            href="https://marketplace.visualstudio.com/items?itemName=hetu-script.hetuscript"
+          >
+            <img
+              src="https://vsmarketplacebadge.apphb.com/version/hetu-script.hetuscript.svg"
+            />
+          </a>
+          <a class="mx-2" title="Discord" href="https://discord.gg/sTF73qcS">
+            <img src="https://img.shields.io/discord/829269197727989760" />
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <Footer />
+</template>
+
+<style>
+
+html {
+  height: 100%;
+}
+
 .title {
   color: green
 }
@@ -112,5 +110,9 @@ export default {
 
 .github-btn:hover {
   background-color: #ecedf3;
+}
+
+.spacer {
+  min-height: 72vh;
 }
 </style>
