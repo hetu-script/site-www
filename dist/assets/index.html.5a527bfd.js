@@ -1,1 +1,0 @@
-const e={key:"v-55cd7e10",path:"/docs/en-US/syntax/namespace/",title:"Namespace",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1642083813e3,contributors:[{name:"hythloday@live.com",email:"hythloday@live.com",commits:1}]},filePathRelative:"docs/en-US/syntax/namespace/readme.md"};export{e as data};
