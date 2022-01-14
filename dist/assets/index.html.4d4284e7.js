@@ -1,0 +1,1 @@
+const e={key:"v-94a4ad18",path:"/docs/en-US/syntax/comment/",title:"Comments",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1642083813e3,contributors:[{name:"hythloday@live.com",email:"hythloday@live.com",commits:1}]},filePathRelative:"docs/en-US/syntax/comment/readme.md"};export{e as data};

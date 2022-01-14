@@ -1,0 +1,1 @@
+const e={key:"v-6c335beb",path:"/docs/en-US/syntax/error/",title:"Error hanlding & assert",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1642083813e3,contributors:[{name:"hythloday@live.com",email:"hythloday@live.com",commits:1}]},filePathRelative:"docs/en-US/syntax/error/readme.md"};export{e as data};
