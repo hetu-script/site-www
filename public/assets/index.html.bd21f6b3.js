@@ -1,1 +1,0 @@
-const e={key:"v-b846a73c",path:"/docs/en-US/syntax/semicolon/",title:"Automatic semicolon insertion",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1642083813e3,contributors:[{name:"hythloday@live.com",email:"hythloday@live.com",commits:1}]},filePathRelative:"docs/en-US/syntax/semicolon/readme.md"};export{e as data};
