@@ -25,35 +25,7 @@ import Footer from "./footer.vue";
       </div>
       <div class="row pt-4 justify-content-center">
         <div class="col-2 text-nowrap text-end">
-          <a class="btn doc-btn" href="/docs/en-US/">Get Started</a>
-        </div>
-        <div class="col-2 text-nowrap">
-          <a class="btn playground-btn" href="/codepad/">Playground</a>
-        </div>
-        <div class="col-2 text-nowrap text-start">
-          <a
-            class="btn github-btn"
-            href="https://github.com/hetu-script/hetu-script"
-            >Github</a
-          >
-        </div>
-      </div>
-      <div class="row pt-4">
-        <div class="col">
-          <a class="mx-2" title="Pub" href="https://pub.dev/packages/hetu_script">
-            <img src="https://img.shields.io/pub/v/hetu_script" />
-          </a>
-          <a
-            title="VSCode Extension"
-            href="https://marketplace.visualstudio.com/items?itemName=hetu-script.hetuscript"
-          >
-            <img
-              src="https://vsmarketplacebadge.apphb.com/version/hetu-script.hetuscript.svg"
-            />
-          </a>
-          <a class="mx-2" title="Discord" href="https://discord.gg/sTF73qcS">
-            <img src="https://img.shields.io/discord/829269197727989760" />
-          </a>
+          <a class="btn doc-btn" href="/docs/en-US/">Learn More...</a>
         </div>
       </div>
       
