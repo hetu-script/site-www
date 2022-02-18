@@ -1,1 +1,0 @@
-const e={key:"v-c1870cc2",path:"/docs/en-US/syntax/type_system/",title:"Type declaration",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1642083813e3,contributors:[{name:"hythloday@live.com",email:"hythloday@live.com",commits:1}]},filePathRelative:"docs/en-US/syntax/type_system/readme.md"};export{e as data};

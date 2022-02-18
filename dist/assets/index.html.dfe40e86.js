@@ -1,1 +1,0 @@
-const e={key:"v-5e52760a",path:"/docs/en-US/syntax/enum/",title:"Enum",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1644571085e3,contributors:[{name:"hythloday@live.com",email:"hythloday@live.com",commits:1},{name:"\u90B5\u71C3",email:"chengfubeiming@gmail.com",commits:1}]},filePathRelative:"docs/en-US/syntax/enum/readme.md"};export{e as data};
