@@ -24,7 +24,7 @@ import Footer from "./footer.vue";
         </div>
       </div>
       <div class="row pt-4 justify-content-center">
-        <div class="col-2 text-nowrap text-end">
+        <div class="col-2 text-nowrap">
           <a class="btn doc-btn" href="/docs/en-US/">Learn More...</a>
         </div>
       </div>
