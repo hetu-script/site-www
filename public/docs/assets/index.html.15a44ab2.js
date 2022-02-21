@@ -1,1 +1,0 @@
-const e={key:"v-706914a9",path:"/en-US/grammar/type_system/",title:"Type declaration",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1645090608e3,contributors:[{name:"\u90B5\u71C3",email:"chengfubeiming@gmail.com",commits:1}]},filePathRelative:"en-US/grammar/type_system/readme.md"};export{e as data};
