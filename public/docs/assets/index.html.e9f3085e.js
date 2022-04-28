@@ -1,7 +1,0 @@
-import{f as n}from"./app.321bd41d.js";import{_ as a}from"./plugin-vue_export-helper.21dcd24c.js";const s={},e=n(`<h1 id="\u679A\u4E3E" tabindex="-1"><a class="header-anchor" href="#\u679A\u4E3E" aria-hidden="true">#</a> \u679A\u4E3E</h1><p>\u679A\u4E3E\u7684\u58F0\u660E\u65B9\u6CD5\u548C Dart \u76F8\u540C\uFF1A</p><div class="language-javascript ext-js line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">enum</span> Country <span class="token punctuation">{</span>
-  unitedStates<span class="token punctuation">,</span>
-  japan<span class="token punctuation">,</span>
-  iraq<span class="token punctuation">,</span>
-  ukraine<span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>\u4F46\u76EE\u524D IDE Tool \u5C1A\u672A\u63D0\u4F9B\u4EE3\u7801\u8865\u5168\u529F\u80FD\uFF0C\u56E0\u6B64 enum \u53EF\u80FD\u5E76\u4E0D\u592A\u597D\u7528\u3002\u76EE\u524D\u4E3B\u8981\u662F\u901A\u8FC7 external \u5173\u952E\u5B57\u6765\u517C\u5BB9 Dart \u4EE3\u7801\u4E2D\u7684 enum \u5BF9\u8C61\u3002</p>`,4);function t(p,r){return e}var o=a(s,[["render",t]]);export{o as default};
