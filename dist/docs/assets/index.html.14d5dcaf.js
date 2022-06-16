@@ -1,0 +1,1 @@
+const e={key:"v-d1345b80",path:"/en-US/grammar/enum/",title:"Enum",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1645090608e3,contributors:[{name:"\u90B5\u71C3",email:"chengfubeiming@gmail.com",commits:1}]},filePathRelative:"en-US/grammar/enum/readme.md"};export{e as data};
