@@ -23,12 +23,34 @@ import Footer from "./footer.vue";
           apps.
         </div>
       </div>
-      <div class="row pt-4 justify-content-center">
+      <div class="row pt-4 pb justify-content-center">
         <div class="col-2 text-nowrap">
           <a class="btn doc-btn" href="/docs/en-US/">Learn More...</a>
         </div>
       </div>
-      
+
+    </div>
+    <div class="spacer2"></div>
+    <div class="container text-center mw-100 pt-5 second-screen">
+      <div class="row">
+        <div class="col">
+          <img class="logo" src="/image/xianxia.png" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col pt-5 fs-2">仙侠小说专有名词随机生成器</div>
+      </div>
+      <div class="row">
+        <div class="col pt-2">
+          人名、法号、功法、秘籍、生灵、材料、丹药、法宝、门派、国家、据点、地域
+        </div>
+      </div>
+      <div class="row p-4 justify-content-center">
+        <div class="col-2 text-nowrap">
+          <a class="btn use-btn" href="/random-names/">立即使用</a>
+        </div>
+      </div>
+      <div class="spacer3"></div>
     </div>
   </div>
   <Footer />
@@ -36,12 +58,17 @@ import Footer from "./footer.vue";
 
 <style>
 
-html {
-  height: 100%;
+
+
+
+body, html {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .title {
-  color: green
+  color: green;
 }
 
 .top-space {
@@ -56,6 +83,12 @@ html {
 
 .doc-btn {
   background-color: #3e8e41;
+  color: white;
+  transition: 0.3s;
+}
+
+.use-btn {
+  background-color: #8379e0;
   color: white;
   transition: 0.3s;
 }
@@ -86,5 +119,18 @@ html {
 
 .spacer {
   min-height: 72vh;
+}
+
+.spacer2 {
+  min-height: 24vh;
+}
+
+.spacer3 {
+  min-height: 10vh;
+}
+
+.second-screen {
+  background-color: rgb(210, 212, 226);
+  margin: 0 auto;
 }
 </style>
