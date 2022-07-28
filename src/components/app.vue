@@ -30,7 +30,8 @@ import Footer from "./footer.vue";
       </div>
 
     </div>
-    <div class="spacer2"></div>
+
+    <!-- <div class="spacer2"></div>
     <div class="container text-center mw-100 pt-5 second-screen">
       <div class="row">
         <div class="col">
@@ -51,7 +52,7 @@ import Footer from "./footer.vue";
         </div>
       </div>
       <div class="spacer3"></div>
-    </div>
+    </div> -->
   </div>
   <Footer />
 </template>

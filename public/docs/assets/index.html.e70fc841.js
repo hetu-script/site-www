@@ -1,1 +1,0 @@
-const e={key:"v-2d9e19ce",path:"/zh-Hans/grammar/future/",title:"\u5F02\u6B65\u64CD\u4F5C\uFF08Future\uFF09",lang:"zh-Hans",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1647423191e3,contributors:[{name:"\u90B5\u71C3",email:"chengfubeiming@gmail.com",commits:3}]},filePathRelative:"zh-Hans/grammar/future/readme.md"};export{e as data};
