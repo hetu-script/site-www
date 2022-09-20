@@ -23,7 +23,7 @@
 			}
     </script>
     <title>语言实现细节 | 河图脚本语言</title><meta name="description" content="专为 Flutter 打造的轻量型嵌入式脚本语言。">
-    <link rel="modulepreload" href="/docs/assets/app.fb854eb5.js"><link rel="modulepreload" href="/docs/assets/index.html.1448e23d.js"><link rel="modulepreload" href="/docs/assets/index.html.20f19e5f.js"><link rel="modulepreload" href="/docs/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="modulepreload" href="/docs/assets/app.c1f9bf1f.js"><link rel="modulepreload" href="/docs/assets/index.html.1448e23d.js"><link rel="modulepreload" href="/docs/assets/index.html.47c4787f.js"><link rel="modulepreload" href="/docs/assets/plugin-vue_export-helper.21dcd24c.js">
     <link rel="stylesheet" href="/docs/assets/style.872af1ec.css">
   </head>
   <body>
@@ -59,6 +59,6 @@
   <span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>iterator 相关接口使用了 Dart 中的 api，但因为本身在脚本中实现，因此并不一定需要这是一个 Dart 的列表 iterator，你可以自行在脚本中定义一个包含成员 <strong>iterator</strong> 的对象，然后这个 <strong>iterator</strong> 本身又包含一个叫做 <strong>moveNext()</strong> 的方法，那么就可以支持这种循环的语法。</p><h2 id="闭包" tabindex="-1"><a class="header-anchor" href="#闭包" aria-hidden="true">#</a> 闭包</h2><p>在河图中，每一个函数在每次执行时都会创建一个新的命名空间。同时这些命名空间可以访问上层命名空间。这样就会让函数闭包可以直接访问和修改外部定义的变量。</p><p>这类似于 Javascript，是一种动态化、运行时的实现方式。而区别于 C++/Rust 中的语法意义上的闭包（lexical closure），后者使用 move 以及按值传递参数等功能实现。</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: chengfubeiming@gmail.com">邵燃</span><!--[-->, <!--]--><!--]--><!--[--><span class="contributor" title="email: hythloday@live.com">hythloday@live.com</span><!----><!--]--><!--]--></span></div></footer><nav class="page-nav"><p class="inner"><span class="prev"><a href="/docs/zh-Hans/guide/analyzer/" class="" aria-label="语法分析工具"><!--[--><!--]--> 语法分析工具 <!--[--><!--]--></a></span><!----></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
-    <script type="module" src="/docs/assets/app.fb854eb5.js" defer></script>
+    <script type="module" src="/docs/assets/app.c1f9bf1f.js" defer></script>
   </body>
 </html>
