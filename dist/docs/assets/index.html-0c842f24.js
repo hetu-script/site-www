@@ -1,0 +1,1 @@
+import{_ as e,p as s,q as t}from"./framework-3f81730e.js";const c={};function n(r,_){return s(),t("div")}const a=e(c,[["render",n],["__file","D:/_dev/hetu-script/docs/docs/.vuepress/.temp/pages/zh-Hans/index.html.vue"]]);export{a as default};

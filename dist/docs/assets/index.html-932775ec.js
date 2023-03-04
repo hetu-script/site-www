@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-4f90fa4a","path":"/zh-Hans/grammar/enum/","title":"枚举","lang":"zh-Hans","frontmatter":{},"headers":[],"git":{"updatedTime":1645090608000,"contributors":[{"name":"邵燃","email":"chengfubeiming@gmail.com","commits":2}]},"filePathRelative":"zh-Hans/grammar/enum/readme.md"}');export{a as data};
