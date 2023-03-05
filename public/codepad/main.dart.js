@@ -23948,7 +23948,7 @@ rK(a){return A.alt(new A.rb("Paste is not implemented for this browser."),null,t
 A.Yr.prototype={
 gLV(){var s=this.b
 s=s==null?null:s.canvasKitBaseUrl
-return s==null?"assets/canvaskit/":s},
+return s==null?"https://unpkg.com/canvaskit-wasm@0.37.1/bin/":s},
 gLW(){var s=this.b
 s=s==null?null:s.canvasKitForceCpuOnly
 return s===!0},
