@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-d1345b80","path":"/en-US/grammar/enum/","title":"Enum","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1645090608000,"contributors":[{"name":"邵燃","email":"chengfubeiming@gmail.com","commits":1}]},"filePathRelative":"en-US/grammar/enum/readme.md"}');export{e as data};
