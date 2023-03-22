@@ -1,8 +1,4 @@
-<<<<<<< HEAD:dist/docs/assets/index.html-eaf22bd2.js
 import{_ as t,M as p,p as c,q as i,R as s,t as n,N as o,a1 as a}from"./framework-5866ffd3.js";const l={},r=a(`<h1 id="类-class" tabindex="-1"><a class="header-anchor" href="#类-class" aria-hidden="true">#</a> 类（class）</h1><p>河图中的类是类似 C++/Java/Dart 中的 class 的一种名义类型（nominal type）。支持大多数 Dart 中的 class 的功能，例如构造函数，属性（get/set），继承（extends），以及在构造函数声明中重定向到其他构造函数或者父类构造函数（通过 this 和 super），以及在构造函数的参数列表中使用 <code>this</code> 来快速初始化实例成员。</p><p>但 mixin 和 implements 用法暂时不支持。</p><p>类中的方法声明使用专门的关键字：construct/get/set/factory 等等。</p><p>下面是一个完整的例子：</p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token comment">// class definition</span>
-=======
-import{_ as t,M as p,p as c,q as i,R as s,t as n,N as o,a1 as a}from"./framework-3f81730e.js";const l={},r=a(`<h1 id="类-class" tabindex="-1"><a class="header-anchor" href="#类-class" aria-hidden="true">#</a> 类（class）</h1><p>河图中的类是类似 C++/Java/Dart 中的 class 的一种名义类型（nominal type）。支持大多数 Dart 中的 class 的功能，例如构造函数，属性（get/set），继承（extends），以及在构造函数声明中重定向到其他构造函数或者父类构造函数（通过 this 和 super），以及在构造函数的参数列表中使用 <code>this</code> 来快速初始化实例成员。</p><p>但 mixin 和 implements 用法暂时不支持。</p><p>类中的方法声明使用专门的关键字：construct/get/set/factory 等等。</p><p>下面是一个完整的例子：</p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token comment">// class definition</span>
->>>>>>> dee888921332bf6f89741e1a04f7c3d00bf5850c:dist/docs/assets/index.html-e69197b0.js
 <span class="token keyword">class</span> <span class="token class-name">Calculator</span> <span class="token punctuation">{</span>
   <span class="token comment">// static private member</span>
   <span class="token keyword">static</span> <span class="token keyword">var</span> _name <span class="token operator">=</span> <span class="token string">&#39;the calculator&#39;</span>
@@ -105,8 +101,4 @@ final objectList <span class="token operator">=</span> p<span class="token punct
 }
 
 print(universe.meaning)
-<<<<<<< HEAD:dist/docs/assets/index.html-eaf22bd2.js
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,8);function k(v,m){const e=p("ExternalLinkIcon");return c(),i("div",null,[r,s("p",null,[n("某些时候我们想要在某些函数式编程的场景使用构造函数，例如我们想要向数组的 map 方法传入一个构造函数。通常情况下这不可行。因为直接传递类名，得到的是一个类型，而不是构造函数本身。要实现这一点，在 Dart 中使用的是 "),s("a",u,[n("constructor tear-off"),o(e)]),n(" 的方法。")]),d])}const h=t(l,[["render",k],["__file","index.html.vue"]]);export{h as default};
-=======
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,8);function k(v,m){const e=p("ExternalLinkIcon");return c(),i("div",null,[r,s("p",null,[n("某些时候我们想要在某些函数式编程的场景使用构造函数，例如我们想要向数组的 map 方法传入一个构造函数。通常情况下这不可行。因为直接传递类名，得到的是一个类型，而不是构造函数本身。要实现这一点，在 Dart 中使用的是 "),s("a",u,[n("constructor tear-off"),o(e)]),n(" 的方法。")]),d])}const h=t(l,[["render",k],["__file","D:/_dev/hetu-script/docs/docs/.vuepress/.temp/pages/zh-Hans/grammar/class/index.html.vue"]]);export{h as default};
->>>>>>> dee888921332bf6f89741e1a04f7c3d00bf5850c:dist/docs/assets/index.html-e69197b0.js
